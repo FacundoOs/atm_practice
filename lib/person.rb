@@ -1,3 +1,5 @@
+require './lib/account'
+
 class Person
     attr_accessor :name, :cash, :account
 
@@ -15,4 +17,9 @@ class Person
     def missing_owner
         raise "A name is required"
     end
+
+    def create_account
+        @account = Account.new(owner:self)
+    end
+
 end

@@ -1,5 +1,6 @@
-require './lib/account.rb'
+require './lib/account'
 require 'date'
+
 describe Account do
     let(:person) {instance_double('Person', name: 'Thomas')}
     subject { described_class.new({owner: person}) }
@@ -31,5 +32,5 @@ describe Account do
 
     it 'is expected to raise error if no owner is set' do
         expect { described_class.new }.to raise_error 'An Account owner is required'
-      end
+    end
 end
