@@ -28,6 +28,10 @@ describe Person do
        expect(subject.account).to be_an_instance_of Account
      end
 
+     it 'with himself as an owner' do
+        expect(subject.account.owner).to be subject
+    end
+
 
   end
 end
