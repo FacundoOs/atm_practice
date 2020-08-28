@@ -27,7 +27,7 @@ class Person
     end
 
     def deposit_cash(amount)
-        account.balance= 0
+        #account.balance= 0
         @account.balance += amount
     end
 
